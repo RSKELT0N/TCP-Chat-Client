@@ -1,6 +1,6 @@
 # TCP-Client application
 
-This is used for ```TCP-Server```, which allows a user to client connect towards the server and send messages through a GUI application.
+This is used for ```TCP-Server```, which will allow a user to connect towards the server and send messages through a GUI application.
 
 ## Run
 ### Compile

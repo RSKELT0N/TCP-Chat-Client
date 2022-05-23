@@ -6,6 +6,7 @@ import javafx.scene.control.ButtonType;
 
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Scanner;
@@ -80,9 +81,9 @@ public class TCPClient extends Thread {
                     try {
                         sleep(CLIENT_NOT_CONNECTED_SLEEP_DELAY);
                     } catch (InterruptedException ex) {
-                    }
-                    continue;
+                    }  
                 }
+                continue;
             }
 
             if (in.startsWith("~[") && in.endsWith("']")) {
@@ -128,9 +129,9 @@ public class TCPClient extends Thread {
             this.start();
             initialConnect = false;
         }
-        send("/nick " + this.username);
+        String nick = "/nick" + " " + this.username;
+        send(nick);
         nickSet = true;
-
 
     }
 
