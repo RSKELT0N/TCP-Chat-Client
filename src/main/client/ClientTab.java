@@ -1,3 +1,5 @@
+package main.client;
+
 import javafx.scene.control.Tab;
 import javafx.scene.control.TextArea;
 
